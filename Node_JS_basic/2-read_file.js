@@ -14,11 +14,7 @@ function countStudents(path) {
     uniqueFieldNames.forEach((field) => {
       const students = fields.filter((student) => student[3] === field);
       const studentNames = students.map((student) => student[0]);
-      console.log(
-        `Number of students in ${field}: ${
-          students.length
-        }. List: ${studentNames.join(', ')}`
-      );
+      console.log(`Number of students in ${field}: ${students.length}. List: ${studentNames.join(', ')}`);
     });
   } catch (error) {
     throw new Error('Cannot load the database');
